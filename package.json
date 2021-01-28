@@ -1,0 +1,22 @@
+{
+  "name": "dbhandler",
+  "version": "1.0.0",
+  "description": "Backend Service to access the database of project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5-bits/DbHandler.git"
+  },
+  "author": "5Bits Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5-bits/DbHandler/issues"
+  },
+  "homepage": "https://github.com/5-bits/DbHandler#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
