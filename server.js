@@ -4,12 +4,14 @@ const bodyParser = require('body-parser')
 const io = require('socket.io')(3100)
 const mongoose = require('mongoose')
 
-app.use(bodyParser.json())
+const testRoutes = require('./routes/testRoutes');
+const readRoutes = require('./routes/readingRoutes');
 
-const ReadingModel = require('./models/Reading');
 const Secrets = require('./secrets');
 
-//console.log(Secrets.mongoUri);
+app.use(bodyParser.json());
+app.use(testRoutes);
+app.use(readRoutes);
 
 mongoose.connect(Secrets.mongoUri, {useNewUrlParser:true, useUnifiedTopology: true})
     .then(message => {
