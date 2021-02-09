@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const ReadingSchema = mongoose.Schema({
-    name: String,
     value: Number
 })
 
