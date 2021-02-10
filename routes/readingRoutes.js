@@ -23,7 +23,7 @@ router.post('/add', (req, res) => {
         message : "Received",
         value : value
     });
-})
+}) 
 
 router.get('/fetch',(req, res)=>{
     return res.json({
