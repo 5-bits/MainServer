@@ -18,7 +18,7 @@ router.post('/add', (req, res) => {
         else{
             res.send(result);
         }
-    });
+    })
     return res.json({
         message : "Received",
         value : value
