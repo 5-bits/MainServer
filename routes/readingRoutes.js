@@ -7,7 +7,7 @@ const read = require("../models/Reading.js")
 //          - Add a reading to the database
 router.post('/add', (req, res) => {
     console.log("Body : ", req.body);
-    var value = new read({ value : req.body});
+    var value = new read({ value : req.body });
     read.insertMany([
         {value : value}
     ],
