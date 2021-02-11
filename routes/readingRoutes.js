@@ -22,9 +22,15 @@ router.post('/add', (req, res) => {
 }) 
 
 router.get('/fetch',(req, res)=>{
-    return res.json({
-        message : 'get works!!'
+    const values = read.find().then( result => {
+        return res.json(result);
     });
+    /*return res.json({
+        message : 'get works!!',
+        value : read.find().then( result => {
+            console.log(result)
+        })
+    });*/
 })
 
 module.exports = router;
