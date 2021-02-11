@@ -16,7 +16,6 @@ router.post('/add', (req, res) => {
         console.log(err)
     })
     return res.json({
-        message : "Received",
         value : value
     })
 }) 
@@ -25,12 +24,6 @@ router.get('/fetch',(req, res)=>{
     const values = read.find().then( result => {
         return res.json(result);
     });
-    /*return res.json({
-        message : 'get works!!',
-        value : read.find().then( result => {
-            console.log(result)
-        })
-    });*/
 })
 
 module.exports = router;
