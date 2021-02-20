@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const io = require('socket.io')(3100)
+const dialog = require('dialogflow')
 const mongoose = require('mongoose')
 
 const testRoutes = require('./routes/testRoutes');
