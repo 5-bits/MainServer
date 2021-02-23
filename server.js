@@ -7,7 +7,6 @@ const mongoose = require('mongoose')
 
 const testRoutes = require('./routes/testRoutes');
 const readRoutes = require('./routes/readingRoutes');
-
 const Secrets = require('./secrets');
 
 app.use(bodyParser.json());
