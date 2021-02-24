@@ -81,7 +81,7 @@ router.post('/dialog', (req, res) => {
       let context;
       let intentResponse;
       for (const query of queries) {
-        try {
+        
           //res.json(`Sending Query: ${query}`);
           intentResponse =  await detectIntent(
             projectId,
@@ -98,15 +98,16 @@ router.post('/dialog', (req, res) => {
           });
           // Use the context from this response for next queries
           context = intentResponse.queryResult.outputContexts;
-        } catch (err) {
-          return res.json({
-            message : 'failure...',
-            error : err
-        });
-        }
+        
+        
       }
     }
-    executeQueries(projectId, sessionId, queries, languageCode);
+    executeQueries(projectId, sessionId, queries, languageCode).catch( err => {
+        return res.json({
+          message : 'failure...',
+          error : err
+      });
+    });
     })
 
 module.exports = router;
