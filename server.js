@@ -9,6 +9,15 @@ const testRoutes = require('./routes/testRoutes');
 const readRoutes = require('./routes/readingRoutes');
 const Secrets = require('./secrets');
 
+
+// this is cors enale for development, remove/ modify at deployment
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
+  
 app.use(bodyParser.json());
 app.use(testRoutes);
 app.use(readRoutes);
